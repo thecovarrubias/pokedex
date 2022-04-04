@@ -1,7 +1,33 @@
-# Vue 3 + Vite
+# Pokédex with Vue 3
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Description
 
-## Recommended IDE Setup
+## Starting 🚀
 
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+These instructions will allow you to get a working copy of the project on your premises for development and testing purposes.
+
+### Installation 🔧
+
+A series of step-by-step examples that tell you what you need to run to get a development environment running.
+
+_Install project dependencies_
+
+```
+npm install
+```
+
+_Run project_
+
+```
+npm run dev
+```
+
+## Deployment 📦
+
+_coming soon..._
+
+## Built with 🛠️
+
+* [Vue](https://vuejs.org/) -  Is a JavaScript framework for building user interfaces.
+* [Axios](https://maven.apache.org/) -  Is a simple promise based HTTP client.
+* [Tailwind](https://rometools.github.io/rome/) - Is a utility-first CSS framework packed with classes.
