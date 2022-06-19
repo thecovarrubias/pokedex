@@ -1,7 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import { createPinia } from 'pinia';
 
-import 'bootstrap-icons/font/bootstrap-icons.css'
-import './index.css'
+import App from './App.vue';
+import router from './router';
 
-createApp(App).mount('#app')
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import './index.css';
+
+createApp(App)
+  .use(createPinia())
+  .use(router)
+  .mount('#app');
