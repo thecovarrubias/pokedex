@@ -24,7 +24,7 @@ npm run dev
 
 ## Deployment 📦
 
-_coming soon..._
+[Preview Project](https://thecovarrubias-pokedex.netlify.app/)
 
 ## Built with 🛠️
 
