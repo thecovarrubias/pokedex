@@ -4,13 +4,13 @@ const routes = [
   {
     path: "/",
     name: "pokemons",
-    component: () => import(/* webpackChunkName: "test" */ "../components/PokemonsList.vue"),
+    component: () => import(/* webpackChunkName: "Pokemons" */ "../components/PokemonsList.vue"),
   },
   {
-    path: "/test",
-    name: "test",
-    component: () => import(/* webpackChunkName: "test" */ "../components/Test.vue"),
-  }
+    path: "/pokemon/:id",
+    name: "pokemon",
+    component: () => import(/* webpackChunkName: "Pokemon" */ "../components/PokemonDetail.vue"),
+  },
 ];
 
 const router = createRouter({

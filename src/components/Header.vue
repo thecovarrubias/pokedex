@@ -1,6 +1,8 @@
 <template>
   <div class="w-full flex flex-col justify-center items-center p-4">
-    <img class="h-24 md:h-32" src="../assets/img/logo.png" alt="Pokémon" />
+    <router-link :to="{ name: 'pokemons' }">
+      <img class="h-24 md:h-32" src="../assets/img/logo.png" alt="Pokémon" />
+    </router-link>
     <input
       class="
         py-2
@@ -15,7 +17,7 @@
       type="text"
       placeholder="Pokémon Search"
       v-model="pokemon"
-      @keyup.enter="searchPokemon(pokemon)"
+      @keyup.enter="search"
     />
   </div>
 </template>
@@ -29,7 +31,15 @@ export default {
 
     return {
       pokemon,
-      searchPokemon,
+
+      search: () => {
+        if (pokemon.value === "") {
+          return;
+        }
+
+        searchPokemon(pokemon.value);
+        pokemon.value = "";
+      },
     };
   },
 };

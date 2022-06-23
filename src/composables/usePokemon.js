@@ -1,8 +1,9 @@
 import axios from "axios";
 import { ref } from "@vue/reactivity";
+import { useRouter } from "vue-router";
 
 const usePokemon = () => {
-
+  const router = useRouter();
   const pokemons = ref([]);
   const pokemon = ref("");
 
@@ -50,8 +51,9 @@ const usePokemon = () => {
   return {
     pokemons,
     pokemon,
-    
-    searchPokemon: (val) => console.log(val),
+
+    getPokemon,
+    searchPokemon: (id) => router.push({ name: "pokemon", params: { id } }),
   };
 };
 
