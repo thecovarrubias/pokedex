@@ -1,12 +1,13 @@
 <template>
-  <!-- <router-link :to="{ name: 'home' }">Home</router-link>
-  <router-link :to="{ name: 'test' }">Test</router-link>
-  <router-view /> -->
-  <pokemons />
+  <PokemonLayout />
 </template>
 
 <script>
-import Pokemons from './components/Pokemons.vue';
+import PokemonLayout from "./layouts/PokemonLayout.vue";
+
 export default {
-  components: { Pokemons },};
+  components: {
+    PokemonLayout,
+  },
+};
 </script>

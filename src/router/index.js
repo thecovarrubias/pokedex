@@ -1,10 +1,15 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHistory } from "vue-router";
 
 const routes = [
   {
-    path: '/test',
-    name: 'test',
-    component: () => import(/* webpackChunkName: "test" */ '../components/Test.vue'),
+    path: "/",
+    name: "pokemons",
+    component: () => import(/* webpackChunkName: "test" */ "../components/PokemonsList.vue"),
+  },
+  {
+    path: "/test",
+    name: "test",
+    component: () => import(/* webpackChunkName: "test" */ "../components/Test.vue"),
   }
 ];
 
