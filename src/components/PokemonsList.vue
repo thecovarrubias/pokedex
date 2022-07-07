@@ -62,21 +62,24 @@ export default {
     const { pokemons, getPokemons } = usePokemon();
 
     const scrollComponent = ref(null);
+    const initItem = ref(1);
     const lastItem = ref(9);
 
     onMounted(() => window.addEventListener("scroll", handleScroll));
     onUnmounted(() => window.addEventListener("scroll", handleScroll));
 
-    const handleScroll = (e) => {
+    const handleScroll = () => {
       let element = scrollComponent.value;
 
       if (element.getBoundingClientRect().bottom < window.innerHeight) {
-        getPokemons(lastItem.value + 2, lastItem.value + 4);
+        initItem.value = lastItem.value + 1;
         lastItem.value = lastItem.value + 4;
+
+        getPokemons(initItem.value, lastItem.value);
       }
     };
 
-    getPokemons(1, lastItem.value);
+    getPokemons(initItem.value, lastItem.value);
 
     return {
       pokemons,
