@@ -4,13 +4,16 @@ import { useRouter } from "vue-router";
 
 const usePokemon = () => {
   const router = useRouter();
-  const pokemons = ref([]);
+
   const pokemon = ref("");
+  const pokemons = ref([]);
 
   const getPokemon = async (val) => {
     const apiUrl = `https://pokeapi.co/api/v2/pokemon/${val}`;
 
     try {
+      if (val === undefined) return;
+
       const {
         data: {
           id,
@@ -46,13 +49,13 @@ const usePokemon = () => {
     }
   };
 
-  getPokemons(1, 9);
-
   return {
-    pokemons,
     pokemon,
+    pokemons,
 
     getPokemon,
+    getPokemons,
+
     searchPokemon: (id) => router.push({ name: "pokemon", params: { id } }),
   };
 };

@@ -56,7 +56,9 @@ import usePokemon from "../composables/usePokemon";
 
 export default {
   setup() {
-    const { pokemons } = usePokemon();
+    const { pokemons, getPokemons } = usePokemon();
+
+    getPokemons(1, 9);
 
     return {
       pokemons,

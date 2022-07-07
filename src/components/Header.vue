@@ -33,9 +33,7 @@ export default {
       pokemon,
 
       search: () => {
-        if (pokemon.value === "") {
-          return;
-        }
+        if (pokemon.value === "") return;
 
         searchPokemon(pokemon.value);
         pokemon.value = "";
