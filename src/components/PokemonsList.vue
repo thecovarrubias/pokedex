@@ -73,7 +73,7 @@ export default {
 
       if (element.getBoundingClientRect().bottom < window.innerHeight) {
         initItem.value = lastItem.value + 1;
-        lastItem.value = lastItem.value + 4;
+        lastItem.value = lastItem.value + 3;
 
         getPokemons(initItem.value, lastItem.value);
       }
