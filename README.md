@@ -1,6 +1,6 @@
 # Pokédex with Vue 3
 
-Description
+App provides Pokémon species information with Vue 3.
 
 ## Starting 🚀
 
@@ -24,7 +24,7 @@ npm run dev
 
 ## Deployment 📦
 
-Preview Project: [https://thecovarrubias-pokedex.netlify.app/](https://thecovarrubias-pokedex.netlify.app/)
+[Preview Project](https://thecovarrubias-pokedex.netlify.app/)
 
 ## Built with 🛠️
 
