@@ -24,16 +24,19 @@ const usePokemon = () => {
             },
           },
           types: pokemonTypes,
+          stats: pokemonStats,
         },
       } = await axios.get(apiUrl);
 
       const types = pokemonTypes.map((x) => x.type.name);
+      const stats = pokemonStats.map((x) => x.base_stat);
 
       const pokemon = {
         id,
         name,
         image,
         types,
+        stats,
       };
 
       return pokemon;

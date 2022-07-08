@@ -1,5 +1,5 @@
 <template>
-  <div ref="scrollComponent">
+  <main ref="scrollComponent">
     <div
       class="
         grid grid-cols-1
@@ -14,11 +14,15 @@
     >
       <div
         class="
+          pokemon-item
           flex flex-colum
           justify-around
           rounded
-          border border-l-zinc-300
+          border border-gray-100
           p-4
+          bg-white
+          transition-all
+          hover:drop-shadow-xl
         "
         v-for="{ id, name, image, types } in pokemons"
         :key="id"
@@ -46,10 +50,12 @@
             </span>
           </div>
         </div>
-        <img :src="image" :alt="name" style="height: 160px" />
+        <router-link :to="{ name: 'pokemon', params: { id } }">
+          <img :src="image" :alt="name" style="height: 160px" />
+        </router-link>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -69,13 +75,15 @@ export default {
     onUnmounted(() => window.addEventListener("scroll", handleScroll));
 
     const handleScroll = () => {
-      let element = scrollComponent.value;
+      if (scrollComponent.value) {
+        let element = scrollComponent.value;
 
-      if (element.getBoundingClientRect().bottom < window.innerHeight) {
-        initItem.value = lastItem.value + 1;
-        lastItem.value = lastItem.value + 3;
+        if (element.getBoundingClientRect().bottom < window.innerHeight) {
+          initItem.value = lastItem.value + 1;
+          lastItem.value = lastItem.value + 3;
 
-        getPokemons(initItem.value, lastItem.value);
+          getPokemons(initItem.value, lastItem.value);
+        }
       }
     };
 
