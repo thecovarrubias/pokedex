@@ -1,7 +1,7 @@
 <template>
   <div class="w-full flex flex-col justify-center items-center p-4">
     <router-link :to="{ name: 'pokemons' }">
-      <img class="h-24 md:h-32" src="../assets/img/logo.png" alt="Pokémon" />
+      <img class="h-24 md:h-32" src="../../assets/img/logo.png" alt="Pokémon" />
     </router-link>
     <input
       class="
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import usePokemon from "../composables/usePokemon";
+import usePokemon from "../../composables/usePokemon";
 
 export default {
   setup() {

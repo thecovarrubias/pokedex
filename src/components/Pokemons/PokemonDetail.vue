@@ -38,7 +38,7 @@ import { useRoute } from "vue-router";
 
 import Chart from "chart.js/auto";
 
-import usePokemon from "../composables/usePokemon";
+import usePokemon from "../../composables/usePokemon";
 
 export default {
   setup() {
