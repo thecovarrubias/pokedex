@@ -1,5 +1,5 @@
 <template>
-  <div
+  <article
     class="
       pokemon-item
       flex flex-colum
@@ -13,8 +13,16 @@
     "
   >
     <div class="flex flex-col justify-around">
-      <p class="font-semibold text-lg">{{ pokemonId }}</p>
-      <p class="capitalize font-semibold text-lg">{{ pokemonName }}</p>
+      <h2 class="font-semibold text-xl">
+        {{
+          pokemonId.toString().length === 1
+            ? "#00" + pokemonId
+            : pokemonId.toString().length === 2
+            ? "#0" + pokemonId
+            : "#" + pokemonId
+        }}
+      </h2>
+      <h3 class="capitalize font-semibold text-lg">{{ pokemonName }}</h3>
       <div>
         <span
           class="
@@ -35,10 +43,10 @@
         </span>
       </div>
     </div>
-    <router-link :to="{ pokemonName: 'pokemon', params: { pokemonId } }">
+    <router-link :to="{ name: 'pokemon', params: { id: pokemonId } }">
       <img :src="pokemonImage" :alt="pokemonName" style="height: 160px" />
     </router-link>
-  </div>
+  </article>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+  <router-link :to="{ name: 'pokemons' }">Back</router-link>
   <main
     class="flex flex-col md:flex-row justify-center items-center text-center"
   >

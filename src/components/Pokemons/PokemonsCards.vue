@@ -1,7 +1,7 @@
 <template>
   <Header />
   <main ref="scrollComponent">
-    <div
+    <section
       class="
         grid grid-cols-1
         md:grid-cols-2
@@ -21,7 +21,7 @@
           :pokemon-types="types"
         />
       </template>
-    </div>
+    </section>
   </main>
 </template>
 
