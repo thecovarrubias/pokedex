@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <main ref="scrollComponent">
     <div
       class="
@@ -59,11 +60,14 @@
 </template>
 
 <script>
+import Header from "../components/Header.vue";
 import { ref, onMounted, onUnmounted } from "vue";
 
 import usePokemon from "../composables/usePokemon";
 
 export default {
+  components: { Header },
+
   setup() {
     const { pokemons, getPokemons } = usePokemon();
 

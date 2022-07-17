@@ -1,13 +1,3 @@
 <template>
-  <PokemonLayout />
+  <router-view />
 </template>
-
-<script>
-import PokemonLayout from "./layouts/PokemonLayout.vue";
-
-export default {
-  components: {
-    PokemonLayout,
-  },
-};
-</script>
