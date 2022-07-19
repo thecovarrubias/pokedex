@@ -14,13 +14,7 @@
   >
     <div class="flex flex-col justify-around">
       <h2 class="font-semibold text-xl">
-        {{
-          pokemonId.toString().length === 1
-            ? "#00" + pokemonId
-            : pokemonId.toString().length === 2
-            ? "#0" + pokemonId
-            : "#" + pokemonId
-        }}
+        {{ pokemonNumber }}
       </h2>
       <h3 class="capitalize font-semibold text-lg">{{ pokemonName }}</h3>
       <div>
@@ -50,6 +44,8 @@
 </template>
 
 <script>
+import { computed } from "vue";
+
 export default {
   props: {
     pokemonId: {
@@ -68,6 +64,27 @@ export default {
       type: Array,
       required: true,
     },
+  },
+
+  setup(props) {
+    const { pokemonId, pokemonName, pokemonImage, pokemonTypes } = props;
+
+    const pokemonNumber = computed(() =>
+      pokemonId < 10
+        ? "#00" + pokemonId
+        : pokemonId >= 10 && pokemonId < 100
+        ? "#0" + pokemonId
+        : "#" + pokemonId
+    );
+
+    return {
+      pokemonId,
+      pokemonName,
+      pokemonImage,
+      pokemonTypes,
+      
+      pokemonNumber,
+    };
   },
 };
 </script>

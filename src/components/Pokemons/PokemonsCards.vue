@@ -26,7 +26,6 @@
 </template>
 
 <script>
-/* Vue */
 import { ref, onMounted, onUnmounted } from "vue";
 
 /* Components */
