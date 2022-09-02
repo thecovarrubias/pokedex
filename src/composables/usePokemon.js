@@ -49,6 +49,7 @@ const usePokemon = () => {
     for (let i = start; i <= end; i++) {
       const pokemon = await getPokemon(i);
       pokemons.value.push(pokemon);
+      pokemons.value.sort((x, y) => x.id - y.id);
     }
   };
 
