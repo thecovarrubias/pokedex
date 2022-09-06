@@ -1,6 +1,11 @@
 import axios from "axios";
+
+/* Vue */
 import { ref } from "@vue/reactivity";
 import { useRouter } from "vue-router";
+
+/* Shared */
+import { POKEMON_TYPES } from "../shared/pokemon_types";
 
 const usePokemon = () => {
   const router = useRouter();
@@ -28,8 +33,8 @@ const usePokemon = () => {
         },
       } = await axios.get(apiUrl);
 
-      const types = pokemonTypes.map((x) => x.type.name);
       const stats = pokemonStats.map((x) => x.base_stat);
+      const types = pokemonTypes.map((x) => POKEMON_TYPES.filter((y) => x.type.name === y.type)[0]);
 
       const pokemon = {
         id,

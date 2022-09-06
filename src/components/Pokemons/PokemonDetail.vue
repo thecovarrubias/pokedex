@@ -20,10 +20,10 @@
             font-semibold
             mx-2
           "
-          v-for="(type, index) in pokemon.types"
+          v-for="({ name }, index) in pokemon.types"
           :key="index"
         >
-          {{ type }}
+          {{ name }}
         </span>
       </div>
     </div>
