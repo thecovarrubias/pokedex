@@ -1,9 +1,8 @@
 <template>
   <article
     class="
-      pokemon-item
-      flex flex-colum
-      justify-around
+      flex flex-col-reverse
+      lg:flex-row lg:justify-around
       rounded
       border border-gray-100
       p-4
@@ -12,7 +11,7 @@
       hover:drop-shadow-xl
     "
   >
-    <div class="flex flex-col justify-around">
+    <div class="h-32 lg:h-auto flex flex-col text-center justify-around">
       <h2 class="font-semibold text-xl">
         {{ pokemonNumber }}
       </h2>
@@ -38,7 +37,12 @@
       </div>
     </div>
     <router-link :to="{ name: 'pokemon', params: { id: pokemonId } }">
-      <img :src="pokemonImage" :alt="pokemonName" style="height: 160px" />
+      <img
+        :src="pokemonImage"
+        :alt="pokemonName"
+        class="mx-auto lg:mx-0"
+        style="height: 160px"
+      />
     </router-link>
   </article>
 </template>
@@ -82,7 +86,7 @@ export default {
       pokemonName,
       pokemonImage,
       pokemonTypes,
-      
+
       pokemonNumber,
     };
   },
