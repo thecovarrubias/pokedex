@@ -6,8 +6,8 @@
         grid grid-cols-1
         md:grid-cols-2
         xl:grid-cols-3
-        gap-10
-        mb-10
+        gap-8
+        mb-8
         px-4
         lg:px-16
         xl:px-32

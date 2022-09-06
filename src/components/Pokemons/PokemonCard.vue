@@ -1,6 +1,8 @@
 <template>
   <article
     class="
+      h-auto
+      lg:h-52
       flex flex-col-reverse
       lg:flex-row lg:justify-around
       rounded
@@ -11,11 +13,20 @@
       hover:drop-shadow-xl
     "
   >
-    <div class="h-32 lg:h-auto flex flex-col text-center justify-around">
-      <h2 class="font-semibold text-xl">
+    <div
+      class="
+        h-36
+        lg:h-auto
+        flex flex-col
+        text-center
+        lg:text-left
+        justify-around
+      "
+    >
+      <h2 class="font-semibold tracking-wide text-lg">
         {{ pokemonNumber }}
       </h2>
-      <h3 class="capitalize font-semibold text-lg">{{ pokemonName }}</h3>
+      <h3 class="capitalize font-semibold text-xl">{{ pokemonName }}</h3>
       <div>
         <span
           class="
@@ -75,10 +86,10 @@ export default {
 
     const pokemonNumber = computed(() =>
       pokemonId < 10
-        ? "#00" + pokemonId
+        ? "00" + pokemonId
         : pokemonId >= 10 && pokemonId < 100
-        ? "#0" + pokemonId
-        : "#" + pokemonId
+        ? "0" + pokemonId
+        : pokemonId
     );
 
     return {
