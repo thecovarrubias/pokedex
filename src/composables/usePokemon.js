@@ -25,7 +25,7 @@ const usePokemon = () => {
           name,
           sprites: {
             other: {
-              "official-artwork": { front_default: image },
+              "home": { front_default: image },
             },
           },
           types: pokemonTypes,

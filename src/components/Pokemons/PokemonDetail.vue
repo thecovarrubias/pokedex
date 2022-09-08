@@ -1,28 +1,14 @@
 <template>
   <router-link :to="{ name: 'pokemons' }">Back</router-link>
-  <main
-    class="flex flex-col md:flex-row justify-center items-center text-center"
-  >
+  <main class="flex flex-col md:flex-row justify-center items-center text-center">
     <div class="mr-0 mb-10 md:mr-20 md:mb-0">
       <img :src="pokemon.image" :alt="pokemon.name" style="height: 225px" />
       <h1 class="capitalize font-semibold text-2xl my-4">
         {{ pokemon.name }}
       </h1>
       <div class="mt-4">
-        <span
-          class="
-            capitalize
-            inline-block
-            bg-gray-200
-            rounded-full
-            px-3
-            py-1
-            font-semibold
-            mx-2
-          "
-          v-for="({ name }, index) in pokemon.types"
-          :key="index"
-        >
+        <span :class="[typeClass, 'capitalize inline-block rounded-md px-3 py-1 text-sm font-semibold mr-2']"
+          :key="index" v-for="({ name, typeClass }, index) in pokemon.types">
           {{ name }}
         </span>
       </div>

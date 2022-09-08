@@ -2,91 +2,91 @@ export const POKEMON_TYPES = [
   {
     type: "bug",
     name: "🐛 Bug",
-    class: "",
+    typeClass: "border-2 border-lime-400 text-lime-400",
   },
   {
     type: "dark",
     name: "🌃 Dark",
-    class: "",
+    typeClass: "border-2 border-gray-400 text-gray-400",
   },
   {
     type: "dragon",
     name: "🐉 Dragon",
-    class: "",
+    typeClass: "border-2 border-indigo-400 text-indigo-400",
   },
   {
     type: "electric",
     name: "⚡ Electric",
-    class: "",
+    typeClass: "border-2 border-amber-400 text-amber-400",
   },
   {
     type: "fairy",
-    name: "✨ Fairy",
-    class: "",
+    name: "🧚‍♀️ Fairy",
+    typeClass: "border-2 border-fuchsia-300 text-fuchsia-300",
   },
   {
     type: "fighting",
     name: "🥊 Fighting",
-    class: "",
+    typeClass: "border-2 border-red-400 text-red-400",
   },
   {
     type: "fire",
     name: "🔥 Fire",
-    class: "",
+    typeClass: "border-2 border-orange-400 text-orange-400",
   },
   {
     type: "flying",
     name: "🍃 Flying",
-    class: "",
+    typeClass: "border-2 border-neutral-400 text-neutral-400",
   },
   {
     type: "ghost",
     name: "👻 Ghost",
-    class: "",
+    typeClass: "border-2 border-violet-300 text-violet-300",
   },
   {
     type: "grass",
     name: "🌱 Grass",
-    class: "",
+    typeClass: "border-2 border-green-400 text-green-400",
   },
   {
     type: "ground",
     name: "🏜️ Ground",
-    class: "",
+    typeClass: "border-2 border-yellow-500 text-yellow-500",
   },
   {
     type: "ice",
     name: "❄️ Ice",
-    class: "",
+    typeClass: "border-2 border-cyan-400 text-cyan-400",
   },
   {
     type: "normal",
     name: "⛰️ Normal",
-    class: "",
+    typeClass: "border-2 border-stone-500 text-stone-500",
   },
   {
     type: "poison",
     name: "💀 Poison",
-    class: "",
+    typeClass: "border-2 border-purple-400 text-purple-400",
   },
   {
     type: "psychic",
     name: "🔮 Psychic",
-    class: ""
+    typeClass: "border-2 border-pink-300 text-pink-300"
   },
   {
     type: "rock",
     name: "🪨 Rock",
-    class: "",
+    typeClass: "border-2 border-yellow-800 text-yellow-800",
   },
   {
     type: "steel",
     name: "⚒️ Steel",
-    class: "",
+    typeClass: "border-2 border-slate-400 text-slate-400",
   },
   {
     type: "water",
     name: "💧 Water",
-    class: "",
+    typeClass: "border-2 border-sky-400 text-sky-400",
   }
 ];
