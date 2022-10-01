@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <PokemonSearch />
   <main ref="scrollComponent">
     <section
       class="
@@ -29,7 +29,7 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 /* Components */
-import Header from "../App/Header.vue";
+import PokemonSearch from "./PokemonSearch.vue";
 import PokemonCard from "./PokemonCard.vue";
 
 /* Composables */
@@ -37,7 +37,7 @@ import usePokemon from "../../composables/usePokemon";
 
 export default {
   components: {
-    Header,
+    PokemonSearch,
     PokemonCard,
   },
 
