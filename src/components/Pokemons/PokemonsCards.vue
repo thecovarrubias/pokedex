@@ -29,8 +29,8 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 /* Components */
-import PokemonSearch from "./PokemonSearch.vue";
-import PokemonCard from "./PokemonCard.vue";
+import PokemonSearch from "../Pokemon/PokemonSearch.vue";
+import PokemonCard from "../Pokemon/PokemonCard.vue";
 
 /* Composables */
 import usePokemon from "../../composables/usePokemon";
