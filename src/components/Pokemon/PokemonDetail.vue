@@ -1,5 +1,4 @@
 <template>
-  <router-link :to="{ name: 'pokemons' }">Back</router-link>
   <main class="flex flex-col md:flex-row justify-center items-center text-center">
     <div class="mr-0 mb-10 md:mr-20 md:mb-0">
       <img :src="pokemon.image" :alt="pokemon.name" style="height: 225px" />
