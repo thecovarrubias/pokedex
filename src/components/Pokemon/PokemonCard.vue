@@ -4,11 +4,11 @@
   >
     <div class="absolute top-5 right-5 lg:top-0 lg:right-0 z-0">
       <svg
+        id="Layer_1"
         class="h-44 md:h-40"
+        data-name="Layer 1"
         fill="#e5e7eb"
         viewBox="0 0 512 512"
-        data-name="Layer 1"
-        id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -16,65 +16,69 @@
         />
       </svg>
     </div>
-    <div
-      class="h-36 lg:h-auto flex flex-col text-center lg:text-left justify-around"
-    >
+
+    <div class="h-36 lg:h-auto flex flex-col text-center lg:text-left justify-around">
       <h2 class="font-semibold text-lg">
         {{ pokemonNumber }}
       </h2>
-      <h3 class="capitalize font-semibold text-xl">{{ pokemonName }}</h3>
+
+      <h3 class="capitalize font-semibold text-xl">
+        {{ pokemonName }}
+      </h3>
+
       <div>
         <span
+          v-for="({ name, typeClass }, index) in pokemonTypes"
+          :key="index"
           :class="[
             typeClass,
-            'capitalize inline-block rounded-md px-3 py-1 text-sm font-semibold mr-2',
+            'capitalize inline-block rounded-md px-3 py-1 text-sm font-semibold mr-2'
           ]"
-          :key="index"
-          v-for="({ name, typeClass }, index) in pokemonTypes"
         >
           {{ name }}
         </span>
       </div>
     </div>
+
     <router-link :to="{ name: 'pokemon', params: { id: pokemonId } }">
       <img
+        class="drop-shadow-lg h-44 md:h-40 mx-auto lg:mx-0 top-10 right-20 lg:top-8 lg:right-8 absolute"
         :src="pokemonImage"
         :alt="pokemonName"
-        class="drop-shadow-lg h-44 md:h-40 mx-auto lg:mx-0 top-10 right-20 lg:top-8 lg:right-8 absolute"
-      />
+      >
     </router-link>
   </article>
 </template>
 
 <script setup>
-import { computed } from "vue";
+  import { computed } from 'vue'
 
-const props = defineProps({
-  pokemonId: {
-    type: Number,
-    required: true,
-  },
-  pokemonName: {
-    type: String,
-    required: true,
-  },
-  pokemonImage: {
-    type: String,
-    required: true,
-  },
-  pokemonTypes: {
-    type: Array,
-    required: true,
-  },
-});
+  const props = defineProps({
+    pokemonId: {
+      type: Number,
+      required: true
+    },
+    pokemonName: {
+      type: String,
+      required: true
+    },
+    pokemonImage: {
+      type: String,
+      required: true
+    },
+    pokemonTypes: {
+      type: Array,
+      required: true
+    }
+  })
 
-const { pokemonId, pokemonName, pokemonImage, pokemonTypes } = props;
+  const { pokemonId, pokemonName, pokemonImage, pokemonTypes } = props
 
-const pokemonNumber = computed(() =>
-  pokemonId < 10
-    ? "00" + pokemonId
-    : pokemonId >= 10 && pokemonId < 100
-    ? "0" + pokemonId
-    : pokemonId
-);
+  const pokemonNumber = computed(() =>
+    pokemonId < 10
+      ? '00' + pokemonId
+      : pokemonId >= 10 && pokemonId < 100
+        ? '0' + pokemonId
+        : pokemonId
+  )
 </script>

@@ -28,8 +28,8 @@ npm run dev
 
 ## Built with 🛠️
 
-* [Vue](https://vuejs.org/) -  Is a JavaScript framework for building user interfaces.
-* [Pinia](https://pinia.vuejs.org/) - Is a store library for Vue, it allows you to share a state across components/pages.
-* [Vue Router](https://router.vuejs.org/) - It deeply integrates with Vue.js core to make building SPA.
-* [Axios](https://maven.apache.org/) -  Is a simple promise based HTTP client.
-* [Tailwind](https://rometools.github.io/rome/) - Is a utility-first CSS framework packed with classes.
+- [Vue](https://vuejs.org/) - Is a JavaScript framework for building user interfaces.
+- [Pinia](https://pinia.vuejs.org/) - Is a store library for Vue, it allows you to share a state across components/pages.
+- [Vue Router](https://router.vuejs.org/) - It deeply integrates with Vue.js core to make building SPA.
+- [Axios](https://maven.apache.org/) - Is a simple promise based HTTP client.
+- [Tailwind](https://rometools.github.io/rome/) - Is a utility-first CSS framework packed with classes.

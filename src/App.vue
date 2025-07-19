@@ -1,15 +1,8 @@
 <template>
-  <Navbar />
+  <NavbarBase />
   <router-view />
 </template>
 
-<script>
-/* Components */
-import Navbar from "./components/Navbar.vue";
-
-export default {
-  components: {
-    Navbar,
-  }
-}
+<script setup>
+  import NavbarBase from './components/NavbarBase.vue'
 </script>
